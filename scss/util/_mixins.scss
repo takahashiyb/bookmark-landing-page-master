@@ -16,7 +16,7 @@
   );
 }
 
-@mixin fs-typography-switching($small-preset, $large-preset) {
+@mixin fs-typography-switching($small-preset, $large-preset, $breakpoint) {
   $map-small: map.get(t.$typographies, $small-preset);
   $map-large: map.get(t.$typographies, $large-preset);
 
@@ -24,26 +24,28 @@
   font-weight: map.get($map-small, font-weight);
   line-height: map.get($map-small, line-height);
   letter-spacing: map.get($map-small, letter-spacing);
+  font-style: map.get($map-small, font-style);
 
   @include fs-fluid(
     f.rem(320),
-    map.get($breakpoints, large),
+    map.get($breakpoints, $breakpoint),
     map.get($map-small, font-size),
     map.get($map-large, font-size)
   );
 
-  @include breakpoint(large) {
+  @include breakpoint($breakpoint) {
     font-family: map.get($map-large, font-family);
     font-weight: map.get($map-large, font-weight);
     line-height: map.get($map-large, line-height);
     letter-spacing: map.get($map-large, letter-spacing);
+    font-style: map.get($map-small, font-style);
   }
 }
 
 // 700px, 900px, >1440px
 $breakpoints: (
   "medium": f.rem(700),
-  "large": f.rem(840),
+  "large": f.rem(900),
   "xlarge": f.rem(1440),
 );
 

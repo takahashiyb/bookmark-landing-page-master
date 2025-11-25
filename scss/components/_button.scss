@@ -1,0 +1,11 @@
+.button {
+  background-color: var(--blue-600);
+  padding: var(--spacing-0100) var(--spacing-0300);
+  border-radius: 5px;
+  white-space: nowrap;
+
+  &.white {
+    background-color: var(--gray-050);
+    color: var(--blue-950);
+  }
+}

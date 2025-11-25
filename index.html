@@ -12,6 +12,13 @@
       href="./images/favicon-32x32.png"
     />
 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+
     <title>Frontend Mentor | Bookmark landing page</title>
 
     <link rel="stylesheet" href="./dist/style.css" />
@@ -39,7 +46,50 @@
       </div>
     </header>
     <main>
-      <svg class="graphic__round-bar--left" width="662.5" height="325">
+      <section class="section__hero">
+        <div class="container container__hero">
+          <section class="section__hero-image">
+            <div class="grid grid__image-hero">
+              <svg
+                class="graphic__round-bar--right"
+                viewBox="0 0 1000 325"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M 1000 0,
+                l-800 0,
+                a-162.5,162.5,
+                0 0 0
+                0, 325,
+                l800 0
+                z
+                "
+                  fill="hsl(231deg, 69%, 60%)"
+                ></path>
+              </svg>
+              <img src="./images/illustration-hero.svg" alt="" />
+            </div>
+          </section>
+          <section class="section__hero-text">
+            <div class="grid grid__text-hero">
+              <h1>A Simple Bookmark Manager</h1>
+              <p>
+                A clean and simple interface to organize your favourite
+                websites. Open a new browser tab and see your sites load
+                instantly. Try it for free.
+              </p>
+              <div class="container container__browser-links">
+                <a class="button button__browser-links" href="#Chrome"
+                  >Get it on Chrome</a
+                ><a class="button button__browser-links white" href="Firefox"
+                  >Get it on Firefox</a
+                >
+              </div>
+            </div>
+          </section>
+        </div>
+      </section>
+      <!-- <svg class="graphic__round-bar--left" width="662.5" height="325">
         <path
           d="M 0 0,
             l500 0,
@@ -49,23 +99,9 @@
             l-500 0
             z
             "
-          fill="yellow"
+          fill="hsl(231deg, 69%, 60%)"
         ></path>
-      </svg>
-
-      <svg class="graphic__round-bar--right" width="662.5" height="325">
-        <path
-          d="M 662.5 0,
-            l-500 0,
-            a-162.5,162.5,
-            0 0 0
-            0, 325,
-            l500 0
-            z
-            "
-          fill="yellow"
-        ></path>
-      </svg>
+      </svg> -->
     </main>
     <footer>
       <div class="attribution">

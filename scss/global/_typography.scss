@@ -4,49 +4,38 @@
 h1,
 h2,
 h3,
-p {
+p,
+a {
   margin: 0;
   line-height: 1.1;
+  text-decoration: none;
 }
 
 h1 {
-  text-transform: uppercase;
-
   @include u.fs-typography-switching(
-    "text-preset-3-bold",
-    "text-preset-3-bold"
+    "text-mobile-preset-1",
+    "text-preset-1",
+    "medium"
   );
-}
-
-h2 {
-  @include u.fs-typography-switching("text-preset-2", "text-preset-1");
 }
 
 p {
-  color: var(--gray-500);
-
   @include u.fs-typography-switching(
-    "text-preset-3-medium",
-    "text-preset-3-medium"
+    "text-mobile-preset-2-regular",
+    "text-preset-4",
+    "medium"
   );
+
+  color: var(--blue-950);
+  opacity: 0.5;
 }
 
 a {
-  @include u.fs-typography-switching("text-preset-4", "text-preset-4");
-}
-
-.text__shop a {
-  color: var(--black);
-  text-decoration: none;
-  text-transform: uppercase;
-}
-
-nav ul li a {
-  text-decoration: none;
-  text-transform: lowercase;
-
   @include u.fs-typography-switching(
-    "text-preset-3-semibold",
-    "text-preset-3-semibold"
+    "text-mobile-preset-2-medium",
+    "text-preset-6-medium",
+    "medium"
   );
+
+  color: var(--white);
 }
