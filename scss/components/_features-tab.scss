@@ -1,0 +1,127 @@
+@use "../util" as u;
+
+.container__tabs {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+
+  @include u.breakpoint(medium) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.wrapper__tab-image {
+  grid-column: 1/-1;
+
+  --space-lr: var(--spacing-0400);
+  --space-gap: 1px;
+  --col-count: 12;
+
+  max-height: 450px;
+
+  display: grid;
+
+  grid-template-columns:
+    1fr repeat(
+      var(--col-count),
+      calc(
+        (
+            min(100% - var(--space-lr), u.rem(1110)) - (var(--col-count) - 1) *
+              var(--space-gap)
+          ) / var(--col-count)
+      )
+    )
+    1fr;
+
+  grid-template-rows: 1fr repeat(4, 2fr) 1fr;
+  row-gap: var(--spacing-0100);
+  overflow: hidden;
+
+  @include u.breakpoint(medium) {
+    --space-gap: var(--spacing-0200);
+    --col-count: 8;
+  }
+
+  .circle {
+    grid-column: 8/12;
+    grid-row: 3/-1;
+
+    @include u.breakpoint(medium) {
+      grid-column: 5/9;
+    }
+
+    @include u.breakpoint(large) {
+      grid-column: 6/10;
+    }
+  }
+
+  .rect {
+    grid-column: 1/10;
+    grid-row: 3/-1;
+
+    @include u.breakpoint(medium) {
+      grid-column: 1/7;
+    }
+
+    @include u.breakpoint(large) {
+      grid-column: 1/8;
+    }
+  }
+
+  .image__tab {
+    grid-column: 3/-2;
+    grid-row: 1/6;
+
+    @include u.breakpoint(large) {
+      grid-column: 2/8;
+    }
+
+    img {
+      max-height: 100%;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      @include u.breakpoint(large) {
+        object-position: right;
+      }
+    }
+
+    @include u.breakpoint(medium) {
+      grid-column: 3/-2;
+    }
+
+    @include u.breakpoint(large) {
+      grid-column: 3/-1;
+    }
+  }
+}
+
+.container__tabs {
+  h3 {
+    border-bottom: solid var(--gray-200);
+
+    padding: 16px;
+    white-space: nowrap;
+  }
+
+  h3:first-child {
+    border-top: solid var(--gray-200);
+  }
+
+  @include u.breakpoint(medium) {
+    h3:first-child {
+      border-top: none;
+    }
+  }
+}
+
+.detail__tab {
+  display: grid;
+  row-gap: var(--spacing-0300);
+  @include u.breakpoint(large) {
+    justify-items: start;
+  }
+}
+
+.detail__tab[hidden] {
+  display: none;
+}

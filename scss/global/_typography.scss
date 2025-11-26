@@ -4,6 +4,7 @@
 h1,
 h2,
 h3,
+h4,
 p,
 a {
   margin: 0;
@@ -15,6 +16,30 @@ h1 {
   @include u.fs-typography-switching(
     "text-mobile-preset-1",
     "text-preset-1",
+    "medium"
+  );
+}
+
+h2 {
+  @include u.fs-typography-switching(
+    "text-mobile-preset-1",
+    "text-preset-2",
+    "medium"
+  );
+}
+
+h3 {
+  @include u.fs-typography-switching(
+    "text-mobile-preset-2-regular",
+    "text-preset-5-regular",
+    "medium"
+  );
+}
+
+h4 {
+  @include u.fs-typography-switching(
+    "text-mobile-preset-1",
+    "text-preset-2",
     "medium"
   );
 }

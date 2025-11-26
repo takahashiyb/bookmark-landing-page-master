@@ -1,0 +1,47 @@
+
+      <section class="section__hero">
+        <div class="container container__hero">
+          <section class="section__hero-image">
+            <div class="grid grid__image-hero">
+              <svg
+                class="graphic__round-bar--right"
+                viewBox="0 0 1000 325"
+                xmlns="http://www.w3.org/2000/svg"
+                preserveAspectRatio="none"
+              >
+                <circle r="45" cx="50" cy="50" fill="red" />
+                <!-- <path
+                  d="M 1000 0,
+                l-800 0,
+                a-162.5,162.5,
+                0 0 0
+                0, 325,
+                l800 0
+                z
+                "
+                  fill="hsl(231deg, 69%, 60%)"
+                ></path> -->
+              </svg>
+              <!-- <div class="hero-rect"></div> -->
+              <img src="./images/illustration-hero.svg" alt="" />
+            </div>
+          </section>
+          <section class="section__hero-text">
+            <div class="grid grid__text-hero">
+              <h1>A Simple Bookmark Manager</h1>
+              <p>
+                A clean and simple interface to organize your favourite
+                websites. Open a new browser tab and see your sites load
+                instantly. Try it for free.
+              </p>
+              <div class="container container__browser-links">
+                <a class="button button__browser-links" href="#Chrome"
+                  >Get it on Chrome</a
+                ><a class="button button__browser-links white" href="Firefox"
+                  >Get it on Firefox</a
+                >
+              </div>
+            </div>
+          </section>
+        </div>
+      </section>

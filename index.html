@@ -47,25 +47,34 @@
     </header>
     <main>
       <section class="section__hero">
-        <div class="container container__hero">
+        <div class="grid grid__hero">
           <section class="section__hero-image">
-            <div class="grid grid__image-hero">
+            <div class="container container__image-hero">
               <svg
-                class="graphic__round-bar--right"
-                viewBox="0 0 1000 325"
+                class="circle"
+                height="100%"
+                width="100%"
+                viewbox="0 0 100 100"
                 xmlns="http://www.w3.org/2000/svg"
+                preserveAspectRatio="xMidYMax meet"
               >
-                <path
-                  d="M 1000 0,
-                l-800 0,
-                a-162.5,162.5,
-                0 0 0
-                0, 325,
-                l800 0
-                z
-                "
-                  fill="hsl(231deg, 69%, 60%)"
-                ></path>
+                <circle r="50" cx="50" cy="50" fill="hsl(231deg, 69%, 60%)" />
+              </svg>
+              <svg
+                class="rect"
+                height="100%"
+                width="100%"
+                viewbox="0 0 300 200"
+                xmlns="http://www.w3.org/2000/svg"
+                preserveAspectRatio="xMaxYMax slice"
+              >
+                <rect
+                  width="300"
+                  height="300"
+                  x="0"
+                  y="0"
+                  style="fill: hsl(231deg, 69%, 60%)"
+                />
               </svg>
               <img src="./images/illustration-hero.svg" alt="" />
             </div>
@@ -89,19 +98,129 @@
           </section>
         </div>
       </section>
-      <!-- <svg class="graphic__round-bar--left" width="662.5" height="325">
-        <path
-          d="M 0 0,
-            l500 0,
-            a162.5,162.5,
-            0 0 1
-            0, 325,
-            l-500 0
-            z
-            "
-          fill="hsl(231deg, 69%, 60%)"
-        ></path>
-      </svg> -->
+
+      <section class="section__features">
+        <div class="container container__features">
+          <section class="section__feature-intro">
+            <div class="grid grid__feature-intro">
+              <h2>Features</h2>
+              <p>
+                Our aim is to make it quick and easy for you to access your
+                favourite websites. Your bookmarks sync between your devices so
+                you can access them on the go.
+              </p>
+            </div>
+          </section>
+          <section class="section__component-tabs" data-tab-open="0">
+            <div class="grid grid__tabs">
+              <div class="container container__tabs">
+                <h3
+                  class="element__tab"
+                  data-tab-index="0"
+                  aria-expanded="true"
+                >
+                  Simple Bookmarking
+                </h3>
+                <h3 class="element__tab" data-tab-index="1">
+                  Speedy Searching
+                </h3>
+                <h3 class="element__tab" data-tab-index="2">Easy Sharing</h3>
+              </div>
+
+              <div class="wrapper wrapper__tab-image">
+                <svg
+                  class="circle"
+                  height="100%"
+                  width="100%"
+                  viewbox="0 0 100 100"
+                  xmlns="http://www.w3.org/2000/svg"
+                  preserveAspectRatio="xMidYMax meet"
+                >
+                  <circle r="50" cx="50" cy="50" fill="hsl(231deg, 69%, 60%)" />
+                </svg>
+                <svg
+                  class="rect"
+                  height="100%"
+                  width="100%"
+                  viewbox="0 0 300 200"
+                  xmlns="http://www.w3.org/2000/svg"
+                  preserveAspectRatio="xMaxYMax slice"
+                >
+                  <rect
+                    width="300"
+                    height="300"
+                    x="0"
+                    y="0"
+                    style="fill: hsl(231deg, 69%, 60%)"
+                  />
+                </svg>
+
+                <div
+                  class="image image__tab"
+                  data-tab-image="0"
+                  aria-expanded="true"
+                >
+                  <img
+                    src="./images/illustration-features-tab-1.svg"
+                    alt="image representing "
+                  />
+                </div>
+
+                <div class="image image__tab" hidden data-tab-image="1">
+                  <img
+                    src="./images/illustration-features-tab-2.svg"
+                    alt="image representing "
+                  />
+                </div>
+
+                <div class="image image__tab" hidden data-tab-image="2">
+                  <img
+                    src="./images/illustration-features-tab-3.svg"
+                    alt="image representing "
+                  />
+                </div>
+              </div>
+              <div class="container container__tab-details">
+                <div class="detail detail__tab" data-tab-details="0">
+                  <h4>Bookmark in one click</h4>
+                  <p>
+                    Organize your bookmarks however you like. Our simple
+                    drag-and-drop interface gives you complete control over how
+                    you manage your favourite sites.
+                  </p>
+                  <a class="button button__more-info" href="#simple-bookmarking"
+                    >More Info</a
+                  >
+                </div>
+
+                <div class="detail detail__tab" hidden data-tab-details="1">
+                  <h4>Intelligent search</h4>
+                  <p>
+                    Our powerful search feature will help you find saved sites
+                    in no time at all. No need to trawl through all of your
+                    bookmarks.
+                  </p>
+                  <a class="button button__more-info" href="#intelligent-search"
+                    >More Info</a
+                  >
+                </div>
+
+                <div class="detail detail__tab" hidden data-tab-details="2">
+                  <h4>Share your bookmarks</h4>
+                  <p>
+                    Easily share your bookmarks and collections with others.
+                    Create a shareable link that you can send at the click of a
+                    button.
+                  </p>
+                  <a class="button button__more-info" href="#easy-sharing"
+                    >More Info</a
+                  >
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </section>
     </main>
     <footer>
       <div class="attribution">
@@ -116,5 +235,6 @@
         >.
       </div>
     </footer>
+    <script src="./js/index.js" type="module"></script>
   </body>
 </html>
