@@ -1,0 +1,30 @@
+@use "../util/" as u;
+
+.card {
+  display: grid;
+  row-gap: var(--spacing-0300);
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  justify-items: center;
+
+  padding: var(--spacing-0400);
+
+  div {
+    display: inherit;
+    align-items: inherit;
+    justify-items: center;
+  }
+
+  .wrapper__download-link {
+    row-gap: var(--spacing-0400);
+
+    div {
+      row-gap: var(--spacing-0100);
+    }
+  }
+
+  .button {
+    justify-self: stretch;
+  }
+}

@@ -3,6 +3,7 @@
   padding: var(--spacing-0100) var(--spacing-0300);
   border-radius: 5px;
   white-space: nowrap;
+  justify-self: center;
 
   &.white {
     background-color: var(--gray-050);
