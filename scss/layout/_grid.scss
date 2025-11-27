@@ -111,7 +111,8 @@
   }
 
   &__feature-intro,
-  &__download-intro {
+  &__download-intro,
+  &__faq-intro {
     --col-count: 12;
     justify-content: center;
     align-items: center;
@@ -156,7 +157,7 @@
       }
 
       @include u.breakpoint(large) {
-        grid-column: 1/8;
+        grid-column: 1/7;
         grid-row: 2;
       }
     }
@@ -206,6 +207,33 @@
       > :nth-child(3) {
         grid-row: 3/7;
       }
+    }
+  }
+
+  &__faq-content {
+    --col-count: 1;
+
+    @include u.breakpoint(large) {
+      --col-count: 12;
+    }
+
+    > * {
+      grid-column: 2;
+
+      @include u.breakpoint(large) {
+        grid-column: 4/-4;
+      }
+    }
+  }
+
+  &__more-faq {
+    --col-count: 1;
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+
+    > * {
+      grid-column: 2;
     }
   }
 }

@@ -1,0 +1,48 @@
+.container__faq {
+  display: grid;
+  row-gap: var(--spacing-0700);
+
+  .component__faq:first-child {
+    border-top: 1px var(--gray-200) solid;
+  }
+
+  .component__faq {
+    border-bottom: 1px var(--gray-200) solid;
+  }
+}
+
+.component__faq {
+  display: grid;
+  padding: var(--spacing-0200) 0;
+
+  summary {
+    display: grid;
+    grid-template-columns: auto max-content;
+    align-items: center;
+
+    p {
+      opacity: 1;
+    }
+  }
+
+  > p {
+    padding-top: var(--spacing-0200);
+  }
+}
+
+.component__faq[open] {
+  summary {
+    img {
+      rotate: 180deg;
+      filter: hue-rotate(120deg);
+    }
+  }
+}
+
+.component__faq:hover {
+  summary {
+    p {
+      color: var(--red-400);
+    }
+  }
+}
