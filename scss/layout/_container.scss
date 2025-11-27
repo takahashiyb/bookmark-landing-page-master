@@ -25,6 +25,25 @@
   &__features {
     row-gap: var(--spacing-0300);
   }
+
+  &__nav-links-header {
+    ul {
+      display: flex;
+      list-style-type: none;
+      column-gap: var(--spacing-0600);
+      a {
+        color: var(--blue-950);
+      }
+      a:hover {
+        color: var(--red-400);
+      }
+    }
+  }
+
+  &__header-right {
+    display: flex;
+    column-gap: var(--spacing-0600);
+  }
 }
 
 svg {
@@ -82,4 +101,9 @@ svg {
       grid-column: 4/-1;
     }
   }
+}
+
+main {
+  display: grid;
+  row-gap: var(--spacing-1000);
 }

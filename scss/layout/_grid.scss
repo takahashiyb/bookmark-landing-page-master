@@ -33,17 +33,27 @@
   }
 
   &__header {
-    .image__logo {
+    --col-count: 1;
+    padding: var(--spacing-0500) 0;
+
+    .container__header {
       grid-column: 2;
-      justify-self: start;
+      display: flex;
+      justify-content: space-between;
     }
 
     .button__header-menu {
-      grid-column: 3;
-      justify-self: end;
-
       @include u.breakpoint(large) {
         display: none;
+      }
+    }
+
+    .button__login,
+    .container__nav-links-header {
+      display: none;
+
+      @include u.breakpoint(large) {
+        display: block;
       }
     }
   }
@@ -88,6 +98,7 @@
       text-align: start;
       justify-content: start;
       justify-items: start;
+      grid-template-columns: 1fr;
     }
 
     h1 {
@@ -97,7 +108,7 @@
         grid-column: 3/-3;
       }
       @include u.breakpoint(large) {
-        grid-column: 2/-1;
+        grid-column: 1;
       }
     }
     p {
@@ -262,6 +273,52 @@
 
     @include u.breakpoint(large) {
       --col-count: 12;
+    }
+  }
+
+  &__footer {
+    --col-count: 1;
+    background-color: var(--blue-950);
+
+    > * {
+      grid-column: 2;
+    }
+  }
+
+  &__dialog {
+    --col-count: 2;
+
+    height: 100%;
+    display: grid;
+    align-content: start;
+    padding: var(--spacing-0500) 0;
+    justify-content: stretch;
+
+    .container__company-logo {
+      grid-column: 2;
+      justify-self: start;
+    }
+
+    .container__button-close {
+      grid-column: 3;
+      justify-self: end;
+    }
+
+    nav {
+      grid-column: 2/-2;
+      grid-row: 2;
+      text-align: center;
+    }
+
+    .button__dialog-login {
+      grid-column: 2/-2;
+      grid-row: 3;
+    }
+
+    .container__dialog-social-links {
+      grid-column: 2/-2;
+      grid-row: 4;
+      height: 100%;
     }
   }
 }

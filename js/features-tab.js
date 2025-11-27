@@ -9,6 +9,9 @@ export function switchTabDisplay() {
       component.setAttribute;
       const index = element.dataset.tabIndex;
       let current = component.dataset.tabOpen;
+      tabs[index].setAttribute("data-selected", "true");
+      tabs[current].setAttribute("data-selected", "false");
+
       images[current].setAttribute("hidden", "");
       details[current].setAttribute("hidden", "");
       images[current].setAttribute("aria-expanded", "false");

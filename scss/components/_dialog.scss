@@ -1,0 +1,84 @@
+@use "../util/" as u;
+.dialog {
+  position: fixed;
+  inset: 0; /* full viewport */
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(37, 43, 70, 0.95); /* semi-transparent backdrop */
+  z-index: 9999;
+  padding: 0;
+}
+
+.dialog__nav {
+  position: relative;
+  z-index: 10000;
+
+  nav {
+    justify-self: center;
+    width: 100%;
+    ul {
+      list-style: none;
+      padding: 0;
+
+      display: grid;
+      justify-content: stretch;
+      justify-items: stretch;
+
+      li {
+        border-bottom: 1px solid var(--gray-200);
+        padding: var(--spacing-0200);
+
+        white-space: nowrap;
+      }
+
+      li:first-child {
+        border-top: 1px solid var(--gray-200);
+      }
+    }
+  }
+
+  .logo {
+    width: 20%;
+    display: grid;
+    justify-content: start;
+    z-index: 2;
+
+    img {
+      height: 100%;
+      object-fit: cover;
+      object-position: left;
+      filter: invert(1) saturate(0) brightness(100);
+    }
+  }
+}
+
+.container__button-close {
+  button {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+  }
+}
+
+.button__dialog-login {
+  padding: var(--spacing-0200);
+  background-color: transparent;
+  border: 3px solid var(--gray-200);
+}
+
+.container__dialog-social-links {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  justify-content: center;
+  column-gap: var(--spacing-0500);
+
+  align-content: end;
+  align-items: end;
+
+  position: absolute;
+  bottom: var(--spacing-0600);
+  left: 50%;
+  translate: -50%;
+}

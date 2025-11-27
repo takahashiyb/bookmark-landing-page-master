@@ -66,7 +66,9 @@ button {
   color: var(--white);
 }
 
-input {
+input,
+.container__nav-links a,
+.container__nav-links-header a {
   @include u.fs-typography-switching(
     "text-mobile-preset-2-regular",
     "text-preset-6-regular",
@@ -101,4 +103,10 @@ input {
   h2 {
     color: var(--white);
   }
+}
+
+.dialog__nav nav a,
+.button__dialog-login {
+  @include u.fs-typography-switching("text-preset-4", "text-preset-4", "large");
+  color: var(--white);
 }

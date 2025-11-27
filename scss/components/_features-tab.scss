@@ -96,6 +96,8 @@
 }
 
 .container__tabs {
+  justify-content: stretch;
+
   h3 {
     border-bottom: solid var(--gray-200);
 
@@ -111,6 +113,32 @@
     h3:first-child {
       border-top: none;
     }
+  }
+
+  h3 {
+    position: relative;
+    outline: none;
+  }
+
+  h3::after {
+    display: block;
+    content: "";
+    width: 100%;
+    height: 4px;
+    background-color: var(--red-400);
+    position: absolute;
+    transform: scale(1);
+    right: 50%;
+    bottom: 0;
+    opacity: 0;
+
+    transition: 0.3s transform, 0.3s opacity;
+  }
+
+  h3[data-selected="true"]::after {
+    display: block;
+    transform: scale(1) translate(50%);
+    opacity: 1;
   }
 }
 

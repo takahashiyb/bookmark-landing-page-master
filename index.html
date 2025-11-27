@@ -35,14 +35,70 @@
     </style>
   </head>
   <body>
+    <dialog class="dialog">
+      <div class="grid grid__dialog dialog__nav">
+        <div class="container__company-logo">
+          <div class="container__company-logo">
+            <div class="name">
+              <img src="./images/logo-bookmark.svg" alt="company logo" />
+            </div>
+            <div class="logo">
+              <img src="./images/logo-bookmark.svg" alt="company logo" />
+            </div>
+          </div>
+        </div>
+        <div class="container__button-close">
+          <button class="button__close">
+            <img src="./images/icon-close.svg" alt="icon close" />
+          </button>
+        </div>
+        <nav>
+          <ul>
+            <li>
+              <a href="#features">FEATURES</a>
+            </li>
+            <li>
+              <a href="#pricing">PRICING</a>
+            </li>
+            <li>
+              <a href="#contact">CONTACT</a>
+            </li>
+          </ul>
+        </nav>
+        <button class="button button__dialog-login">LOGIN</button>
+        <div class="container__dialog-social-links">
+          <a href="#facebook"
+            ><img src="./images/icon-facebook.svg" alt="icon facebook"
+          /></a>
+          <a href="#twitter"
+            ><img src="./images/icon-twitter.svg" alt="icon twitter"
+          /></a>
+        </div>
+      </div>
+      <div class="overlay"></div>
+    </dialog>
     <header>
       <div class="grid grid__header">
-        <div class="image__logo">
-          <img src="./images/logo-bookmark.svg" alt="" />
+        <div class="container container__header">
+          <div class="image__logo">
+            <img src="./images/logo-bookmark.svg" alt="" />
+          </div>
+          <div class="container container__header-right">
+            <button class="button__header-menu">
+              <img src="./images/icon-hamburger.svg" alt="icon header menu" />
+            </button>
+            <div class="container container__nav-links-header">
+              <nav>
+                <ul>
+                  <li><a href="#features">FEATURES</a></li>
+                  <li><a href="#pricing">PRICING</a></li>
+                  <li><a href="#contact">CONTACT</a></li>
+                </ul>
+              </nav>
+            </div>
+            <button class="button__login red" type="button">LOGIN</button>
+          </div>
         </div>
-        <button class="button__header-menu">
-          <img src="./images/icon-hamburger.svg" alt="icon header menu" />
-        </button>
       </div>
     </header>
     <main>
@@ -90,7 +146,7 @@
               <div class="container container__browser-links">
                 <a class="button button__browser-links" href="#Chrome"
                   >Get it on Chrome</a
-                ><a class="button button__browser-links white" href="Firefox"
+                ><a class="button button__browser-links white" href="#firefox"
                   >Get it on Firefox</a
                 >
               </div>
@@ -99,7 +155,7 @@
         </div>
       </section>
 
-      <section class="section__features">
+      <section id="features" class="section__features">
         <div class="container container__features">
           <section class="section__feature-intro">
             <div class="grid grid__feature-intro">
@@ -118,6 +174,7 @@
                   class="element__tab"
                   data-tab-index="0"
                   aria-expanded="true"
+                  data-selected="true"
                 >
                   Simple Bookmarking
                 </h3>
@@ -221,7 +278,7 @@
           </section>
         </div>
       </section>
-      <section class="section__download">
+      <section id="pricing" class="section__download">
         <div class="container container__download">
           <section class="section__download-intro">
             <div class="grid grid__download-intro">
@@ -280,7 +337,7 @@
           </section>
         </div>
       </section>
-      <section class="section__faq">
+      <section id="contact" class="section__faq">
         <div class="container container__faq">
           <section class="section__faq-intro">
             <div class="grid grid__faq-intro">
@@ -358,13 +415,43 @@
           </div>
           <div class="form__subscribe">
             <input type="email" placeholder="Enter your email address" />
-            <button type="submit">Contact Us</button>
+            <button class="red" type="submit">Contact Us</button>
           </div>
         </div>
       </section>
     </main>
-
-    <footer>
+    <footer class="section__footer">
+      <div class="grid grid__footer">
+        <div class="container__footer">
+          <div class="container__company-logo">
+            <div class="name">
+              <img src="./images/logo-bookmark.svg" alt="company logo" />
+            </div>
+            <div class="logo">
+              <img src="./images/logo-bookmark.svg" alt="company logo" />
+            </div>
+          </div>
+          <div class="container__nav-links">
+            <nav>
+              <ul>
+                <li><a href="#features">features</a></li>
+                <li><a href="#pricing">pricing</a></li>
+                <li><a href="#contact">contact</a></li>
+              </ul>
+            </nav>
+          </div>
+          <div class="container__footer-social-links">
+            <a href="#facebook"
+              ><img src="./images/icon-facebook.svg" alt="icon facebook"
+            /></a>
+            <a href="#twitter"
+              ><img src="./images/icon-twitter.svg" alt="icon twitter"
+            /></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <footer class="section__attribution">
       <div class="attribution">
         Challenge by
         <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
