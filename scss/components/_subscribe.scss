@@ -1,0 +1,28 @@
+@use "../util/" as u;
+
+.grid__subscribe {
+  background-color: var(--blue-600);
+  padding: var(--spacing-0600) 0;
+}
+.form__subscribe {
+  display: grid;
+  justify-content: stretch;
+  justify-items: stretch;
+  gap: var(--spacing-0200);
+
+  input {
+    width: 100%;
+    padding: var(--spacing-0200);
+
+    border-radius: 5px;
+    border: none;
+  }
+
+  button {
+    white-space: nowrap;
+  }
+
+  @include u.breakpoint(medium) {
+    grid-template-columns: auto min-content;
+  }
+}

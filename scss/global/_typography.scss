@@ -55,7 +55,8 @@ p {
   opacity: 0.5;
 }
 
-a {
+a,
+button {
   @include u.fs-typography-switching(
     "text-mobile-preset-2-medium",
     "text-preset-6-medium",
@@ -63,6 +64,14 @@ a {
   );
 
   color: var(--white);
+}
+
+input {
+  @include u.fs-typography-switching(
+    "text-mobile-preset-2-regular",
+    "text-preset-6-regular",
+    "medium"
+  );
 }
 
 .title-card {
@@ -74,4 +83,22 @@ a {
 
   color: var(--blue-950);
   opacity: 1;
+}
+
+.intro__subscribe {
+  p {
+    text-transform: uppercase;
+    color: var(--white);
+    opacity: 1;
+
+    @include u.fs-typography-switching(
+      "text-mobile-preset-3",
+      "text-preset-6-semibold",
+      "medium"
+    );
+  }
+
+  h2 {
+    color: var(--white);
+  }
 }
